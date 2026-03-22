@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parroquia Ntra. Sra. del Carmen</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <style>
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-lora { font-family: 'Lora', serif; }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4a574 0%, #c9a227 50%, #d4a574 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #c9a227, #d4a574);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 12px;
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, #c9a227, #d4a574);
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(201, 162, 39, 0.4);
+        }
+
+        .schedule-card {
+            transition: all 0.3s ease;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(201, 162, 39, 0.2);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .cross-decoration::before {
+            content: '✝';
+            position: absolute;
+            font-size: 120px;
+            color: rgba(201, 162, 39, 0.08);
+            top: -20px;
+            right: -20px;
+        }
+    </style>
+    <style>body { box-sizing: border-box; }</style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="h-full font-lora bg-stone-50 text-stone-800 overflow-auto">
+<div class="min-h-full w-full">
+    <!-- Hero Section -->
+    <header class="hero-gradient relative overflow-hidden"><img src="https://www.abc.com.py/resizer/v2/3X6BTCF7CFBNLP5HSVEB7RLFZY.jpeg?auth=430cc31c1297e24fa1afc8be6f56ad855d584327dedc5f2f29b987cd76859894&amp;width=770&amp;smart=true" alt="Templo Nuestra Señora del Carmen" loading="lazy" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none';">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none">
+                <pattern id="crosses" x="0" y="0" width="20" height="20" patternunits="userSpaceOnUse">
+                    <path d="M10 5 L10 15 M5 10 L15 10" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </pattern> <rect width="100%" height="100%" fill="url(#crosses)" class="text-amber-200" />
+            </svg>
+        </div>
+        <div class="relative z-10 px-6 py-16 md:py-24 text-center">
+            <div class="float-animation mb-6">
+                <svg class="w-24 h-24 mx-auto text-amber-300" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <!-- Escapulario de la Virgen del Carmen --> <!-- Cuerda/cadena superior --> <path d="M30 15 Q50 10 70 15" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" /> <!-- Escapulario izquierdo (frontal) --> <rect x="20" y="20" width="25" height="32" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" /> <!-- Virgen del Carmen en escapulario izquierdo --> <circle cx="32" cy="28" r="4" fill="currentColor" opacity="0.4" /> <path d="M32 32 L32 40 M28 35 L36 35" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" /> <!-- Cruz en escapulario izquierdo --> <path d="M32 42 L32 48 M29 45 L35 45" stroke="currentColor" stroke-width="1" stroke-linecap="round" /> <!-- Cuerda del escapulario --> <path d="M32 52 Q40 55 50 55 Q60 55 68 52" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" /> <!-- Escapulario derecho (dorsal) --> <rect x="55" y="20" width="25" height="32" rx="2" fill="currentColor" opacity="0.1" stroke="currentColor" /> <!-- Corazón (símbolo del Escapulario del Carmen) --> <path d="M67 26 Q67 23 65 23 Q63 23 62 25 Q61 23 59 23 Q57 23 57 26 Q57 30 62 34 Q67 30 67 26" fill="currentColor" opacity="0.4" /> <!-- Texto/decoración --> <circle cx="62" cy="40" r="1" fill="currentColor" /> <circle cx="62" cy="44" r="1" fill="currentColor" /> <!-- Halo divino --> <circle cx="50" cy="35" r="28" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3" stroke-dasharray="2,2" /> <!-- Rayos de gracia --> <line x1="50" y1="8" x2="50" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" /> <line x1="75" y1="35" x2="79" y2="35" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" /> <line x1="25" y1="35" x2="21" y2="35" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h1 id="parish-name" class="font-cinzel text-3xl md:text-5xl font-bold text-white mb-4">Parroquia <span class="gold-gradient">Ntra. Sra. del Carmen</span></h1>
+            <p id="welcome-message" class="text-amber-100/90 text-lg md:text-xl max-w-2xl mx-auto mb-8">Bienvenidos a nuestra comunidad parroquial</p><!-- Mass Schedule -->
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-amber-400/30">
+                    <div class="flex items-center gap-3 text-white">
+                        <i data-lucide="calendar" class="w-5 h-5 text-amber-400"></i>
+                        <div class="text-left">
+                            <p class="text-amber-300 text-sm font-semibold">Domingo</p>
+                            <p class="text-xl font-cinzel">07:30 hs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-amber-400/30">
+                    <div class="flex items-center gap-3 text-white">
+                        <i data-lucide="calendar" class="w-5 h-5 text-amber-400"></i>
+                        <div class="text-left">
+                            <p class="text-amber-300 text-sm font-semibold">Jueves</p>
+                            <p class="text-xl font-cinzel">19:00 hs</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Facebook Link --> <a href="https://www.facebook.com/parroquiavirgen.delcarmen.186/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-6 py-3 rounded-full transition-all hover:scale-105">
+            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg> Síguenos en Facebook </a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-50 to-transparent"></div>
+    </header><!-- Semana Santa Section -->
+    <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Semana Santa 2025 </span>
+            <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Programa de <span class="text-amber-700">Semana Santa</span></h2>
+            <p class="text-stone-600 max-w-2xl mx-auto">Te invitamos a vivir junto a nuestra comunidad estos días santos de reflexión, oración y celebración.</p>
+        </div><!-- Timeline -->
+        <div class="relative pl-12 md:pl-16 space-y-8">
+            <div class="timeline-line"></div><!-- Viernes 27 de Marzo --> <!-- Viernes de Dolores -->
+            <div class="relative fade-in-up" style="animation-delay: 0.1s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 relative overflow-hidden">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-violet-600 to-violet-700 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Viernes</p>
+                            <p class="text-2xl font-cinzel font-bold">27</p>
+                            <p class="text-xs">Marzo</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Viernes de Dolores</h3>
+                            <p class="text-violet-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">💔 Celebración de los dolores de María</p>
+                </div>
+            </div><!-- Miércoles 1 de Abril -->
+            <div class="relative fade-in-up" style="animation-delay: 0.15s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Miércoles</p>
+                            <p class="text-2xl font-cinzel font-bold">1</p>
+                            <p class="text-xs">Abril</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Rezo del Vía Crucis</h3>
+                            <p class="text-blue-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 18:00 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">📿 En el patio del templo</p>
+                </div>
+            </div><!-- Jueves 2 de Abril -->
+            <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-100 to-transparent rounded-bl-full"></div>
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-amber-600 to-yellow-600 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Jueves</p>
+                            <p class="text-2xl font-cinzel font-bold">2</p>
+                            <p class="text-xs">Abril</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Jueves Santo</h3>
+                            <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+                        </div>
+                    </div>
+                    <div class="text-stone-600 space-y-2 text-sm md:text-base">
+                        <p>⛪ <strong>Misa y Lavatorio de los pies</strong></p>
+                        <p>👥 Encargados de la liturgia: Legión de María</p>
+                        <p class="text-xs text-stone-500">(Junto con la coordinadora invitaremos a fieles a ser apóstoles)</p>
+                        <div class="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
+                            <p class="font-semibold text-amber-800">🕯️ Vigilia de Adoración al Santísimo</p>
+                            <p class="text-amber-700 font-bold mt-2">EL TEMPLO PERMANECERÁ ABIERTO HASTA EL VIERNES de tardecita/noche</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Viernes 3 de Abril -->
+            <div class="relative fade-in-up" style="animation-delay: 0.25s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-red-100 bg-gradient-to-br from-white to-red-50">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-red-700 to-red-800 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Viernes</p>
+                            <p class="text-2xl font-cinzel font-bold">3</p>
+                            <p class="text-xs">Abril</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Viernes Santo</h3>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-lg border border-red-100">
+                            <p class="font-semibold text-stone-800 mb-2">🙏 Confesión por la mañana</p>
+                            <div class="space-y-2 text-sm text-stone-600">
+                                <p><strong>15:00 hs</strong> - Celebración de la Pasión</p>
+                                <p><strong>16:30 hs</strong> - Meditación de las 7 Palabras</p>
+                                <p><strong>17:00 hs</strong> - Adoración de la Cruz</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-blue-800 font-semibold">📿 Inicio de la Novena de la Divina Misericordia</p>
+                            <p class="text-sm text-blue-600">Luego de la celebración del día</p>
+                        </div>
+                        <p class="text-sm text-stone-500 italic">Encargados: Renovación Carismática Católica</p>
+                    </div>
+                </div>
+            </div><!-- Sábado 4 de Abril -->
+            <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Sábado</p>
+                            <p class="text-2xl font-cinzel font-bold">4</p>
+                            <p class="text-xs">Abril</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Sábado de Gloria</h3>
+                            <p class="text-indigo-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+                        </div>
+                    </div>
+                    <div class="text-stone-600">
+                        <p>🔥 <strong>Vigilia Pascual</strong></p>
+                        <p class="text-sm mt-2">Encargados: Familias Misioneras de Cristo</p>
+                    </div>
+                </div>
+            </div><!-- Domingo 5 de Abril - Pascua -->
+            <div class="relative fade-in-up" style="animation-delay: 0.35s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 relative overflow-hidden">
+                    <div class="absolute -top-4 -right-4 text-8xl opacity-20">
+                        🌅
+                    </div>
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Domingo</p>
+                            <p class="text-2xl font-cinzel font-bold">5</p>
+                            <p class="text-xs">Abril</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">¡Domingo de Pascua!</h3>
+                            <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 07:30 hs</p>
+                        </div>
+                    </div>
+                    <div class="text-stone-600">
+                        <p>🕊️ <strong>Misa de Resurrección</strong></p>
+                        <p class="text-sm mt-2">Encargados: Legión de María</p>
+                    </div>
+                    <p class="mt-4 text-center font-cinzel text-xl font-bold text-amber-700">¡Aleluya! ¡Cristo ha Resucitado!</p>
+                </div>
+            </div><!-- Domingo de Ramos -->
+            <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 relative overflow-hidden">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-green-600 to-green-700 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Domingo</p>
+                            <p class="text-lg font-cinzel font-bold">de Ramos</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Santa Misa</h3>
+                            <p class="text-green-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 07:30 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">🌿 Inicia en el portón del templo con la procesión y bendición de Ramos.</p>
+                </div>
+            </div><!-- Miércoles Santo -->
+            <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-purple-600 to-purple-700 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Miércoles</p>
+                            <p class="text-lg font-cinzel font-bold">Santo</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Películas de Semana Santa</h3>
+                            <p class="text-purple-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 18:00 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">🎬 Proyección de películas de Semana Santa para los Jóvenes</p>
+                </div>
+            </div><!-- Jueves Santo -->
+            <div class="relative fade-in-up" style="animation-delay: 0.4s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-100 to-transparent rounded-bl-full"></div>
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-amber-600 to-yellow-600 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Jueves</p>
+                            <p class="text-lg font-cinzel font-bold">Santo</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Celebración Eucarística</h3>
+                            <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+                        </div>
+                    </div>
+                    <div class="text-stone-600 space-y-2 text-sm md:text-base">
+                        <p>⛪ <strong>Encargados de la liturgia:</strong> Legión de María</p>
+                        <p class="text-xs text-stone-500">(Junto con la coordinadora invitaremos a fieles a ser apóstoles)</p>
+                        <div class="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
+                            <p class="font-semibold text-amber-800">🕯️ Vigilia de Adoración al Santísimo</p>
+                            <p class="text-amber-700 font-bold mt-2">EL TEMPLO PERMANECERÁ ABIERTO HASTA EL VIERNES de tardecita/noche</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Viernes Santo -->
+            <div class="relative fade-in-up" style="animation-delay: 0.5s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-red-100 bg-gradient-to-br from-white to-red-50">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-red-700 to-red-800 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Viernes</p>
+                            <p class="text-lg font-cinzel font-bold">Santo</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Pasión del Señor</h3>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-red-100">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-lg font-bold text-sm whitespace-nowrap">15:00 hs</span>
+                            <div>
+                                <p class="font-semibold text-stone-800">Celebración de la Pasión</p>
+                                <p class="text-sm text-stone-500">Encargados: Renovación Carismática Católica</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-red-100">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-lg font-bold text-sm whitespace-nowrap">17:00 hs</span>
+                            <div>
+                                <p class="font-semibold text-stone-800">Meditación de las 7 Palabras</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-blue-800 font-semibold">📿 Inicio de la Novena de la Divina Misericordia</p>
+                            <p class="text-sm text-blue-600">Luego de la celebración del día (~16:30 hs)</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Sábado de Gloria -->
+            <div class="relative fade-in-up" style="animation-delay: 0.6s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100">
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Sábado</p>
+                            <p class="text-lg font-cinzel font-bold">de Gloria</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">Vigilia Pascual</h3>
+                            <p class="text-indigo-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">⛪ <strong>Encargados de la liturgia:</strong> Familias Misioneras de Cristo</p>
+                </div>
+            </div><!-- Domingo de Pascua -->
+            <div class="relative fade-in-up" style="animation-delay: 0.7s;">
+                <div class="timeline-dot top-2"></div>
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 relative overflow-hidden">
+                    <div class="absolute -top-4 -right-4 text-8xl opacity-20">
+                        🌅
+                    </div>
+                    <div class="flex flex-wrap items-start gap-4 mb-4">
+                        <div class="bg-gradient-to-br from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-xl">
+                            <p class="text-xs font-semibold uppercase tracking-wider">Domingo</p>
+                            <p class="text-lg font-cinzel font-bold">de Pascua</p>
+                        </div>
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-stone-800">¡Cristo ha Resucitado!</h3>
+                            <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 07:30 hs</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-600">⛪ <strong>Encargados:</strong> Legión de María</p>
+                    <p class="mt-4 text-center font-cinzel text-xl font-bold text-amber-700">¡Aleluya! ¡Ha Resucitado!</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- Próximos Eventos Section -->
+    <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-amber-50 to-stone-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12"><span class="inline-block bg-amber-200 text-amber-900 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Próximos Eventos </span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Celebraciones <span class="text-amber-700">Especiales</span></h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Te invitamos a participar en las festividades y celebraciones de nuestra comunidad parroquial.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8"><!-- Pentecostés -->
+                <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-red-100 hover:border-red-200 relative overflow-hidden group">
+                    <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
+                        🔥
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-red-500 to-orange-500 text-white p-3 rounded-xl"><i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-stone-800">Pentecostés</h3>
+                        </div>
+                        <p id="pentecostes-date" class="text-red-700 font-semibold text-lg mb-3">Domingo, 18 de mayo</p>
+                        <p class="text-stone-600 leading-relaxed">Celebramos el descenso del Espíritu Santo sobre los apóstoles. Una festividad llena de alegría y renovación espiritual para nuestra comunidad.</p>
+                        <div class="mt-4 p-3 bg-red-50 rounded-lg border border-red-200">
+                            <p class="text-red-800 text-sm"><strong>Misa especial</strong> a las 07:30 hs</p>
+                        </div>
+                    </div>
+                </div><!-- Fiesta Patronal -->
+                <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-blue-100 hover:border-blue-200 relative overflow-hidden group">
+                    <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
+                        👑
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-blue-500 to-purple-500 text-white p-3 rounded-xl"><i data-lucide="heart" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-cinzel text-2xl font-bold text-stone-800">Fiesta Patronal</h3>
+                        </div>
+                        <p id="patronal-date" class="text-blue-700 font-semibold text-lg mb-3">Martes, 16 de julio - Nuestra Señora del Carmen</p>
+                        <p class="text-stone-600 leading-relaxed">Honramos a la Virgen María del Carmen, protectora de nuestra parroquia. Nos congregamos en fe y devoción para celebrar a nuestra Madre celestial.</p>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-blue-800 text-sm"><strong>Celebración solemne</strong> y procesión parroquial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Programas y Catequesis Section -->
+    <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Programas Parroquiales</span>
+            <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Formación y <span class="text-amber-700">Catequesis</span></h2>
+            <p class="text-stone-600 max-w-2xl mx-auto">Propuestas de formación espiritual y catequética para todas las edades.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6"><!-- Catequesis 2026 -->
+            <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-green-100 hover:border-green-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-3 rounded-lg"><i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-stone-800">Catequesis 2026</h3>
+                </div>
+                <div class="space-y-3 text-stone-600">
+                    <p class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0"></i> <span><strong>Ya ha comenzado</strong> la formación catequética para niños y jóvenes</span></p>
+                    <p class="text-sm text-stone-500">Preparación para los sacramentos y formación en la fe</p>
+                    <div class="pt-3 border-t border-green-100">
+                        <p class="text-green-700 font-semibold text-sm">Consulta horarios en secretaría</p>
+                    </div>
+                </div>
+            </div><!-- Catequesis Adultos -->
+            <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-purple-100 hover:border-purple-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-600 text-white p-3 rounded-lg"><i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-stone-800">Catequesis Adultos</h3>
+                </div>
+                <div class="space-y-3 text-stone-600">
+                    <p class="flex items-start gap-2"><i data-lucide="calendar" class="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0"></i> <span><strong>Inicia en mayo</strong> la formación catequética para adultos</span></p>
+                    <p class="text-sm text-stone-500">Profundización en la fe y espiritualidad cristiana</p>
+                    <div class="pt-3 border-t border-purple-100">
+                        <p class="text-purple-700 font-semibold text-sm">Mayor información próximamente</p>
+                    </div>
+                </div>
+            </div><!-- Cursillo Prebaustimal -->
+            <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-cyan-100 hover:border-cyan-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-3 rounded-lg"><i data-lucide="droplet" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-stone-800">Cursillo Prebautismal</h3>
+                </div>
+                <div class="space-y-3 text-stone-600">
+                    <p class="flex items-start gap-2"><i data-lucide="repeat" class="w-4 h-4 text-cyan-600 mt-0.5 flex-shrink-0"></i> <span><strong>Cada primer domingo</strong> del mes a las 10:00 hs</span></p>
+                    <p class="text-sm text-stone-500">Preparación para el Bautismo de niños y adultos</p>
+                    <div class="pt-3 border-t border-cyan-100">
+                        <p class="text-cyan-700 font-semibold text-sm">Inscripción en secretaría</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Horario de Misas Section -->
+    <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-stone-100 to-amber-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Horario de <span class="text-amber-700">Misas</span></h2>
+                <p class="text-stone-600">Te esperamos en nuestras celebraciones eucarísticas</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="sun" class="w-8 h-8 text-amber-600"></i>
+                        <h3 class="font-cinzel text-2xl font-bold text-stone-800">Domingos</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                            <p class="text-amber-900 font-bold text-lg">07:30 hs</p>
+                            <p class="text-amber-700 text-sm">Misa de la comunidad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="moon" class="w-8 h-8 text-amber-600"></i>
+                        <h3 class="font-cinzel text-2xl font-bold text-stone-800">Jueves</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+                            <p class="text-amber-900 font-bold text-lg">19:00 hs</p>
+                            <p class="text-amber-700 text-sm">Misa vespertina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Ministerios y Grupos Section -->
+    <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-purple-50 to-stone-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12"><span class="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Ministerios</span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Grupos y <span class="text-amber-700">Ministerios</span></h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Múltiples formas de servir y participar en nuestra comunidad parroquial.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6"><!-- Legión de María Juvenil -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-red-100 hover:border-red-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white p-3 rounded-lg"><i data-lucide="shield-heart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Legión de María Juvenil</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Jóvenes comprometidos en la evangelización y el servicio mariano.</p>
+                    <div class="pt-3 border-t border-red-100">
+                        <p class="text-red-700 font-semibold text-sm">Fe y acción apostólica</p>
+                        <p id="legion-maria-coord" class="text-red-600 text-sm font-medium mt-2">Coordinador/a: Por asignar</p>
+                    </div>
+                </div><!-- Familias Misioneras de Cristo -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-green-100 hover:border-green-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-3 rounded-lg"><i data-lucide="home-heart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Familias Misioneras de Cristo</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Familias que viven la fe en comunidad y misionan en el barrio.</p>
+                    <div class="pt-3 border-t border-green-100">
+                        <p class="text-green-700 font-semibold text-sm">Familia, fe y misión</p>
+                        <p id="familias-misioneras-coord" class="text-green-600 text-sm font-medium mt-2">Coordinador/a: Por asignar</p>
+                    </div>
+                </div><!-- Renovación Carismática Católica -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-orange-100 hover:border-orange-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-orange-500 to-yellow-600 text-white p-3 rounded-lg"><i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Renovación Carismática Católica</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Experiencia del Espíritu Santo en oración y dones carismáticos.</p>
+                    <div class="pt-3 border-t border-orange-100">
+                        <p class="text-orange-700 font-semibold text-sm">Espíritu Santo vivo</p>
+                        <p id="renovacion-carismatica-coord" class="text-orange-600 text-sm font-medium mt-2">Coordinador/a: Por asignar</p>
+                    </div>
+                </div><!-- Divina Misericordia -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-blue-100 hover:border-blue-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-blue-500 to-cyan-600 text-white p-3 rounded-lg"><i data-lucide="hands-praying" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Divina Misericordia</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Devoción y oración por la misericordia infinita de Dios.</p>
+                    <div class="pt-3 border-t border-blue-100">
+                        <p class="text-blue-700 font-semibold text-sm">Misericordia divina</p>
+                        <p id="divina-misericordia-coord" class="text-blue-600 text-sm font-medium mt-2">Coordinador/a: Por asignar</p>
+                    </div>
+                </div><!-- Pequeñas Hermanas de María -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-pink-100 hover:border-pink-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-pink-500 to-rose-600 text-white p-3 rounded-lg"><i data-lucide="heart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Pequeñas Hermanas de María</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Grupo de niñas en formación mariana y servicio comunitario.</p>
+                    <div class="pt-3 border-t border-pink-100">
+                        <p class="text-pink-700 font-semibold text-sm">María, modelo de fe</p>
+                        <p id="pequeñas-hermanas-coord" class="text-pink-600 text-sm font-medium mt-2">Coordinador/a: Por asignar</p>
+                    </div>
+                </div><!-- Coro Infanto-Juvenil -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-indigo-100 hover:border-indigo-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-3 rounded-lg"><i data-lucide="music" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Coro Infanto-Juvenil</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Niños y jóvenes que aman cantar para la gloria de Dios.</p>
+                    <div class="pt-3 border-t border-indigo-100">
+                        <p class="text-indigo-700 font-semibold text-sm">Bajo la dirección de Profe Martita</p>
+                        <p id="choir-children-names" class="text-indigo-600 text-sm font-medium mt-2">Miembros: Por asignar</p>
+                    </div>
+                </div><!-- Grupo de Alabanza -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-sky-100 hover:border-sky-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-sky-500 to-cyan-600 text-white p-3 rounded-lg"><i data-lucide="music-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Grupo de Alabanza</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Ministerio de música contemporánea para las celebraciones litúrgicas.</p>
+                    <div class="pt-3 border-t border-sky-100">
+                        <p class="text-sky-700 font-semibold text-sm">Experiencia musical litúrgica</p>
+                        <p id="choir-praise-info" class="text-sky-600 text-sm font-medium mt-2"><strong>Profe Sandra</strong></p>
+                    </div>
+                </div><!-- Coro RCC -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-fuchsia-100 hover:border-fuchsia-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-fuchsia-500 to-pink-600 text-white p-3 rounded-lg"><i data-lucide="music-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Coro RCC</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Ministerio de música de la Renovación Carismática Católica.</p>
+                    <div class="pt-3 border-t border-fuchsia-100">
+                        <p class="text-fuchsia-700 font-semibold text-sm">Canto carismático en comunidad</p>
+                        <p id="choir-rcc-info" class="text-fuchsia-600 text-sm font-medium mt-2"><strong>Profe Lili</strong></p>
+                    </div>
+                </div><!-- Monaguillos/Ministros -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 hover:border-amber-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-amber-500 to-yellow-600 text-white p-3 rounded-lg"><i data-lucide="cross" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Monaguillos</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Jóvenes que asisten en las celebraciones litúrgicas.</p>
+                    <div class="pt-3 border-t border-amber-100">
+                        <p class="text-amber-700 font-semibold text-sm">Ministerio litúrgico</p>
+                        <p id="altar-servers-names" class="text-amber-600 text-sm font-medium mt-2">Miembros: Por asignar</p>
+                    </div>
+                </div><!-- Ministros de la Eucaristía -->
+                <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-teal-100 hover:border-teal-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-gradient-to-br from-teal-500 to-emerald-600 text-white p-3 rounded-lg"><i data-lucide="chalice" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-stone-800">Ministros de la Eucaristía</h3>
+                    </div>
+                    <p class="text-stone-600 text-sm mb-4">Fieles autorizados para distribuir la Sagrada Comunión.</p>
+                    <div class="pt-3 border-t border-teal-100">
+                        <p class="text-teal-700 font-semibold text-sm">Ministerio extraordinario</p>
+                        <p id="eucharistic-ministers-names" class="text-teal-600 text-sm font-medium mt-2">Miembros: Por asignar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Galería de Eventos Section -->
+    <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-stone-100 to-amber-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12"><span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Galería de Momentos </span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Momentos de <span class="text-amber-700">Fe y Comunidad</span></h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Compartimos los momentos más especiales de nuestra parroquia y comunidad parroquial.</p>
+            </div><!-- Fiesta Patronal -->
+            <div class="mb-16">
+                <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3"><span class="w-2 h-2 bg-amber-700 rounded-full"></span> Fiesta Patronal - Nuestra Señora del Carmen</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Foto 1 Fiesta Patronal -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all h-64 md:h-72"><img src="https://www.facebook.com/photo/?fbid=870483345262635&amp;set=pcb.870483455262624" alt="Procesión Fiesta Patronal" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.background='linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%)'; this.alt='Imagen no disponible'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.textContent='Foto de Fiesta Patronal'; this.style.color='#92400e'; this.style.fontSize='14px';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white font-semibold text-sm">Procesión Fiesta Patronal</p>
+                        </div>
+                    </div><!-- Foto 2 Fiesta Patronal -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all h-64 md:h-72"><img src="https://www.facebook.com/photo/?fbid=870483321929305&amp;set=pcb.870483455262624" alt="Celebración Patronal" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.background='linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)'; this.alt='Imagen no disponible'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.textContent='Foto de Celebración'; this.style.color='#92400e'; this.style.fontSize='14px';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white font-semibold text-sm">Celebración Patronal</p>
+                        </div>
+                    </div><!-- Foto 3 Iglesia -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all h-64 md:h-72 md:col-span-1 lg:row-span-2"><img src="https://itapua.gov.py/wp-content/uploads/2025/08/iglesia_Virgen_del_Carmen.webp" alt="Templo Nuestra Señora del Carmen" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.background='linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)'; this.alt='Imagen no disponible'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.textContent='Iglesia del Carmen'; this.style.color='#e0e7ff'; this.style.fontSize='14px';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white font-semibold text-sm">Templo Nuestra Señora del Carmen</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Virgen del Carmen -->
+            <div class="mb-16">
+                <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3"><span class="w-2 h-2 bg-blue-700 rounded-full"></span> Nuestra Señora del Carmen</h3>
+                <div class="grid md:grid-cols-3 gap-6 max-w-2xl"><!-- Foto Virgen -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all h-64 md:col-span-3 md:h-80"><img src="https://www.facebook.com/photo/?fbid=870483258595978&amp;set=pcb.870483455262624" alt="Virgen del Carmen" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.background='linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%)'; this.alt='Imagen no disponible'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.textContent='Virgen del Carmen'; this.style.color='#1e40af'; this.style.fontSize='16px'; this.style.fontWeight='bold';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <p class="text-white font-semibold text-lg">Madre del Carmen, Protectora de Nuestra Parroquia</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Comunidad -->
+            <div>
+                <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3"><span class="w-2 h-2 bg-green-700 rounded-full"></span> Vida Comunitaria</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Espacio para más fotos comunitarias -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+                        <div class="text-center"><i data-lucide="camera" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+                            <p class="text-green-700 font-semibold">Próximas fotos</p>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+                        <div class="text-center"><i data-lucide="users" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+                            <p class="text-green-700 font-semibold">Actividades Comunitarias</p>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+                        <div class="text-center"><i data-lucide="heart" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+                            <p class="text-green-700 font-semibold">Servicio Comunitario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Contacto</span>
+            <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Ubícanos y <span class="text-amber-700">Contáctanos</span></h2>
+            <p class="text-stone-600 max-w-2xl mx-auto">Estamos aquí para servirte. No dudes en comunicarte con nosotros.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-8"><!-- Información de Contacto -->
+            <div class="space-y-6">
+                <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+                    <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6">Información</h3>
+                    <div class="space-y-6"><!-- Párroco -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-purple-100 text-purple-700 p-3 rounded-lg flex-shrink-0"><i data-lucide="user" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-stone-800">Párroco</p>
+                                <p id="parish-priest" class="text-purple-700 font-bold text-lg">Padre Adolfo B.</p>
+                                <p class="text-sm text-stone-500 mt-1">Al servicio de nuestra comunidad</p>
+                            </div>
+                        </div><!-- Teléfono -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-amber-100 text-amber-700 p-3 rounded-lg flex-shrink-0"><i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-stone-800">Teléfono</p>
+                                <p id="parish-phone" class="text-amber-700 font-bold text-lg">+54 9 ...</p>
+                                <p class="text-sm text-stone-500 mt-1">Llámanos durante horario de secretaría</p>
+                            </div>
+                        </div><!-- Horario Secretaría -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 text-blue-700 p-3 rounded-lg flex-shrink-0"><i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-stone-800">Horario de Secretaría</p>
+                                <p id="secretary-hours" class="text-blue-700 font-semibold">Jueves, viernes y sábado de mañana</p>
+                                <p class="text-sm text-stone-500 mt-1">En la casa parroquial</p>
+                            </div>
+                        </div><!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 text-green-700 p-3 rounded-lg flex-shrink-0"><i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-stone-800">Email</p>
+                                <p id="parish-email" class="text-green-700 font-semibold">contacto@parroquia.com</p>
+                                <p class="text-sm text-stone-500 mt-1">Responderemos lo antes posible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Mapa -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-amber-100 h-96 md:h-auto flex flex-col">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8244234844893!2d-58.45293!3d-34.60527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sParroquia%20Ntra.%20Sra.%20del%20Carmen!5e0!3m2!1ses!2sar!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="flex-grow"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="hero-gradient text-white py-12 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <svg class="w-12 h-12 mx-auto mb-4 text-amber-400" viewbox="0 0 100 100" fill="currentColor">
+                <path d="M50 5 L50 95 M20 30 L80 30" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round" />
+            </svg>
+            <h3 class="font-cinzel text-2xl font-bold mb-2">Parroquia Ntra. Sra. del Carmen</h3>
+            <p class="text-amber-200/80 mb-6">Unidos en fe, esperanza y caridad</p><a href="https://www.facebook.com/parroquiavirgen.delcarmen.186/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-300 hover:text-amber-100 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg> Visítanos en Facebook </a>
+            <p class="mt-8 text-sm text-amber-200/60">© 2025 Parroquia Nuestra Señora del Carmen</p>
+        </div>
+    </footer>
+</div>
+<script>
+    const defaultConfig = {
+        parish_name: 'Parroquia Ntra. Sra. del Carmen',
+        parish_priest: 'Padre Adolfo B.',
+        welcome_message: 'Bienvenidos a nuestra comunidad parroquial',
+        pentecostes_date: 'Domingo, 18 de mayo',
+        patronal_date: 'Martes, 16 de julio - Nuestra Señora del Carmen',
+        parish_phone: '+54 9 ...',
+        secretary_hours: 'Jueves, viernes y sábado de mañana',
+        parish_email: 'contacto@parroquia.com',
+        choir_children: 'Profe Martita',
+        choir_adults: 'Profe Sandra o Profe Lili',
+        eucharistic_ministers: 'Acercarse al Padre',
+        choir_children_names: 'Por asignar',
+        choir_praise_coord: 'Profe Sandra',
+        choir_rcc_coord: 'Profe Lili',
+        altar_servers_names: 'Por asignar',
+        eucharistic_ministers_names: 'Por asignar',
+        background_color: '#1a1a2e',
+        surface_color: '#ffffff',
+        text_color: '#292524',
+        primary_color: '#c9a227',
+        secondary_color: '#d4a574'
+    };
+
+    async function onConfigChange(config) {
+        const parishName = config.parish_name || defaultConfig.parish_name;
+        const parishPriest = config.parish_priest || defaultConfig.parish_priest;
+        const welcomeMessage = config.welcome_message || defaultConfig.welcome_message;
+        const pentecostesDate = config.pentecostes_date || defaultConfig.pentecostes_date;
+        const patronalDate = config.patronal_date || defaultConfig.patronal_date;
+        const parishPhone = config.parish_phone || defaultConfig.parish_phone;
+        const secretaryHours = config.secretary_hours || defaultConfig.secretary_hours;
+        const parishEmail = config.parish_email || defaultConfig.parish_email;
+        const bgColor = config.background_color || defaultConfig.background_color;
+        const surfaceColor = config.surface_color || defaultConfig.surface_color;
+        const textColor = config.text_color || defaultConfig.text_color;
+        const primaryColor = config.primary_color || defaultConfig.primary_color;
+        const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+        const choirChildren = config.choir_children || defaultConfig.choir_children;
+        const choirAdults = config.choir_adults || defaultConfig.choir_adults;
+        const eucharisticMinisters = config.eucharistic_ministers || defaultConfig.eucharistic_ministers;
+        const legionMariaCoord = config.legion_maria_coord || 'Por asignar';
+        const familiasCoord = config.familias_misioneras_coord || 'Por asignar';
+        const renovacionCoord = config.renovacion_carismatica_coord || 'Por asignar';
+        const misericordiaCoord = config.divina_misericordia_coord || 'Por asignar';
+        const pequeñasHermanasCoord = config.pequeñas_hermanas_coord || 'Por asignar';
+        const choirChildrenNames = config.choir_children_names || defaultConfig.choir_children_names;
+        const choirPraiseCoord = config.choir_praise_coord || defaultConfig.choir_praise_coord;
+        const choirRccCoord = config.choir_rcc_coord || defaultConfig.choir_rcc_coord;
+        const altarServersNames = config.altar_servers_names || defaultConfig.altar_servers_names;
+        const eucharisticMinistersNames = config.eucharistic_ministers_names || defaultConfig.eucharistic_ministers_names;
+
+        // Update text content
+        const parishNameEl = document.getElementById('parish-name');
+        if (parishNameEl) {
+            parishNameEl.innerHTML = parishName.replace('Ntra. Sra. del Carmen', '<span class="gold-gradient">Ntra. Sra. del Carmen</span>');
+        }
+
+        const parishPriestEl = document.getElementById('parish-priest');
+        if (parishPriestEl) parishPriestEl.textContent = parishPriest;
+
+        const welcomeEl = document.getElementById('welcome-message');
+        if (welcomeEl) welcomeEl.textContent = welcomeMessage;
+
+        const pentecostesEl = document.getElementById('pentecostes-date');
+        if (pentecostesEl) pentecostesEl.textContent = pentecostesDate;
+
+        const patronalEl = document.getElementById('patronal-date');
+        if (patronalEl) patronalEl.textContent = patronalDate;
+
+        const phoneEl = document.getElementById('parish-phone');
+        if (phoneEl) phoneEl.textContent = parishPhone;
+
+        const secretaryEl = document.getElementById('secretary-hours');
+        if (secretaryEl) secretaryEl.textContent = secretaryHours;
+
+        const emailEl = document.getElementById('parish-email');
+        if (emailEl) emailEl.textContent = parishEmail;
+
+        const choirChildrenEl = document.getElementById('choir-children-info');
+        if (choirChildrenEl) choirChildrenEl.innerHTML = '<strong>' + choirChildren + '</strong>';
+
+        const choirAdultsEl = document.getElementById('choir-adults');
+        if (choirAdultsEl) choirAdultsEl.textContent = choirAdults;
+
+        const eucharisticMinistersEl = document.getElementById('eucharistic-ministers');
+        if (eucharisticMinistersEl) eucharisticMinistersEl.textContent = eucharisticMinisters;
+
+        const legionMariaEl = document.getElementById('legion-maria-coord');
+        if (legionMariaEl) legionMariaEl.textContent = 'Coordinador/a: ' + legionMariaCoord;
+
+        const familiasEl = document.getElementById('familias-misioneras-coord');
+        if (familiasEl) familiasEl.textContent = 'Coordinador/a: ' + familiasCoord;
+
+        const renovacionEl = document.getElementById('renovacion-carismatica-coord');
+        if (renovacionEl) renovacionEl.textContent = 'Coordinador/a: ' + renovacionCoord;
+
+        const misericordiaEl = document.getElementById('divina-misericordia-coord');
+        if (misericordiaEl) misericordiaEl.textContent = 'Coordinador/a: ' + misericordiaCoord;
+
+        const pequeñasHermanasEl = document.getElementById('pequeñas-hermanas-coord');
+        if (pequeñasHermanasEl) pequeñasHermanasEl.textContent = 'Coordinador/a: ' + pequeñasHermanasCoord;
+
+        const choirChildrenNamesEl = document.getElementById('choir-children-names');
+        if (choirChildrenNamesEl) choirChildrenNamesEl.textContent = 'Miembros: ' + choirChildrenNames;
+
+        const choirPraiseEl = document.getElementById('choir-praise-info');
+        if (choirPraiseEl) choirPraiseEl.innerHTML = '<strong>' + choirPraiseCoord + '</strong>';
+
+        const choirRccEl = document.getElementById('choir-rcc-info');
+        if (choirRccEl) choirRccEl.innerHTML = '<strong>' + choirRccCoord + '</strong>';
+
+        const altarServersEl = document.getElementById('altar-servers-names');
+        if (altarServersEl) altarServersEl.textContent = 'Miembros: ' + altarServersNames;
+
+        const eucharisticMinistersNamesEl = document.getElementById('eucharistic-ministers-names');
+        if (eucharisticMinistersNamesEl) eucharisticMinistersNamesEl.textContent = 'Miembros: ' + eucharisticMinistersNames;
+
+        // Update colors via CSS custom properties
+        document.documentElement.style.setProperty('--bg-color', bgColor);
+        document.documentElement.style.setProperty('--surface-color', surfaceColor);
+        document.documentElement.style.setProperty('--text-color', textColor);
+        document.documentElement.style.setProperty('--primary-color', primaryColor);
+        document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+
+        // Apply background color to hero sections
+        document.querySelectorAll('.hero-gradient').forEach(el => {
+            el.style.background = linear-gradient(135deg, ${bgColor} 0%, ${adjustColor(bgColor, 20)} 50%, ${adjustColor(bgColor, 40)} 100%);
+        });
+
+        // Apply surface color to cards
+        document.querySelectorAll('.card-glass').forEach(el => {
+            el.style.backgroundColor = surfaceColor;
+        });
+
+        // Apply text color
+        document.querySelectorAll('.text-stone-800, .text-stone-600').forEach(el => {
+            if (el.classList.contains('text-stone-800')) {
+                el.style.color = textColor;
+            }
+        });
+
+        // Apply primary color to accents
+        document.querySelectorAll('.text-amber-400, .text-amber-700, .text-amber-800').forEach(el => {
+            el.style.color = primaryColor;
+        });
+    }
+
+    function adjustColor(hex, percent) {
+        const num = parseInt(hex.replace('#', ''), 16);
+        const amt = Math.round(2.55 * percent);
+        const R = Math.min(255, (num >> 16) + amt);
+        const G = Math.min(255, ((num >> 8) & 0x00FF) + amt);
+        const B = Math.min(255, (num & 0x0000FF) + amt);
+        return #${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)};
+    }
+
+    function mapToCapabilities(config) {
+        return {
+            recolorables: [
+                {
+                    get: () => config.background_color || defaultConfig.background_color,
+                    set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+                },
+                {
+                    get: () => config.surface_color || defaultConfig.surface_color,
+                    set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+                },
+                {
+                    get: () => config.text_color || defaultConfig.text_color,
+                    set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+                },
+                {
+                    get: () => config.primary_color || defaultConfig.primary_color,
+                    set: (value) => { config.primary_color = value; window.elementSdk.setConfig({ primary_color: value }); }
+                },
+                {
+                    get: () => config.secondary_color || defaultConfig.secondary_color,
+                    set: (value) => { config.secondary_color = value; window.elementSdk.setConfig({ secondary_color: value }); }
+                }
+            ],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+        };
+    }
+
+    function mapToEditPanelValues(config) {
+        return new Map([
+            ['parish_name', config.parish_name || defaultConfig.parish_name],
+            ['parish_priest', config.parish_priest || defaultConfig.parish_priest],
+            ['welcome_message', config.welcome_message || defaultConfig.welcome_message],
+            ['pentecostes_date', config.pentecostes_date || defaultConfig.pentecostes_date],
+            ['patronal_date', config.patronal_date || defaultConfig.patronal_date],
+            ['parish_phone', config.parish_phone || defaultConfig.parish_phone],
+            ['secretary_hours', config.secretary_hours || defaultConfig.secretary_hours],
+            ['parish_email', config.parish_email || defaultConfig.parish_email],
+            ['choir_children', config.choir_children || defaultConfig.choir_children],
+            ['choir_adults', config.choir_adults || defaultConfig.choir_adults],
+            ['eucharistic_ministers', config.eucharistic_ministers || defaultConfig.eucharistic_ministers],
+            ['legion_maria_coord', config.legion_maria_coord || 'Por asignar'],
+            ['familias_misioneras_coord', config.familias_misioneras_coord || 'Por asignar'],
+            ['renovacion_carismatica_coord', config.renovacion_carismatica_coord || 'Por asignar'],
+            ['divina_misericordia_coord', config.divina_misericordia_coord || 'Por asignar'],
+            ['pequeñas_hermanas_coord', config.pequeñas_hermanas_coord || 'Por asignar'],
+            ['choir_children_names', config.choir_children_names || defaultConfig.choir_children_names],
+            ['choir_praise_coord', config.choir_praise_coord || defaultConfig.choir_praise_coord],
+            ['choir_rcc_coord', config.choir_rcc_coord || defaultConfig.choir_rcc_coord],
+            ['altar_servers_names', config.altar_servers_names || defaultConfig.altar_servers_names],
+            ['eucharistic_ministers_names', config.eucharistic_ministers_names || defaultConfig.eucharistic_ministers_names]
+        ]);
+    }
+
+
+    // Initialize
+    lucide.createIcons();
+
+    if (window.elementSdk) {
+        window.elementSdk.init({
+            defaultConfig,
+            onConfigChange,
+            mapToCapabilities,
+            mapToEditPanelValues
+        });
+    }
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e05dc658267116a',t:'MTc3NDE4OTQ3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
