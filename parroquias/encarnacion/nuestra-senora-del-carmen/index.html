@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parroquia Ntra. Sra. del Carmen</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-lora { font-family: 'Lora', serif; }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    }
+    
+    .gold-gradient {
+      background: linear-gradient(135deg, #d4a574 0%, #c9a227 50%, #d4a574 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-glass {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    
+    .timeline-line {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #c9a227, #d4a574);
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: 12px;
+      width: 18px;
+      height: 18px;
+      background: linear-gradient(135deg, #c9a227, #d4a574);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(201, 162, 39, 0.4);
+    }
+    
+    .schedule-card {
+      transition: all 0.3s ease;
+    }
+    
+    .schedule-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(201, 162, 39, 0.2);
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .cross-decoration::before {
+      content: '✝';
+      position: absolute;
+      font-size: 120px;
+      color: rgba(201, 162, 39, 0.08);
+      top: -20px;
+      right: -20px;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-lora bg-stone-50 text-stone-800 overflow-auto">
+  <div class="min-h-full w-full">
+   <!-- Hero Section -->
+   <header class="hero-gradient relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+     <svg class="w-full h-full" viewbox="0 0 100 100" preserveaspectratio="none">
+      <pattern id="crosses" x="0" y="0" width="20" height="20" patternunits="userSpaceOnUse">
+       <path d="M10 5 L10 15 M5 10 L15 10" stroke="currentColor" stroke-width="0.5" fill="none" />
+      </pattern> <rect width="100%" height="100%" fill="url(#crosses)" class="text-amber-200" />
+     </svg>
+    </div>
+    <div class="relative z-10 px-6 py-16 md:py-24 text-center">
+     <div class="float-animation mb-6">
+      <svg class="w-24 h-24 mx-auto text-amber-300" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2"><!-- Escapulario de la Virgen del Carmen --> <!-- Cuerda/cadena superior --> <path d="M30 15 Q50 10 70 15" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" /> <!-- Escapulario izquierdo (frontal) --> <rect x="20" y="20" width="25" height="32" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" /> <!-- Virgen del Carmen en escapulario izquierdo --> <circle cx="32" cy="28" r="4" fill="currentColor" opacity="0.4" /> <path d="M32 32 L32 40 M28 35 L36 35" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" /> <!-- Cruz en escapulario izquierdo --> <path d="M32 42 L32 48 M29 45 L35 45" stroke="currentColor" stroke-width="1" stroke-linecap="round" /> <!-- Cuerda del escapulario --> <path d="M32 52 Q40 55 50 55 Q60 55 68 52" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" /> <!-- Escapulario derecho (dorsal) --> <rect x="55" y="20" width="25" height="32" rx="2" fill="currentColor" opacity="0.1" stroke="currentColor" /> <!-- Corazón (símbolo del Escapulario del Carmen) --> <path d="M67 26 Q67 23 65 23 Q63 23 62 25 Q61 23 59 23 Q57 23 57 26 Q57 30 62 34 Q67 30 67 26" fill="currentColor" opacity="0.4" /> <!-- Texto/decoración --> <circle cx="62" cy="40" r="1" fill="currentColor" /> <circle cx="62" cy="44" r="1" fill="currentColor" /> <!-- Halo divino --> <circle cx="50" cy="35" r="28" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3" stroke-dasharray="2,2" /> <!-- Rayos de gracia --> <line x1="50" y1="8" x2="50" y2="5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" /> <line x1="75" y1="35" x2="79" y2="35" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" /> <line x1="25" y1="35" x2="21" y2="35" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+      </svg>
+     </div>
+     <h1 id="parish-name" class="font-cinzel text-3xl md:text-5xl font-bold text-white mb-4">Parroquia <span class="gold-gradient">Ntra. Sra. del Carmen</span></h1>
+     <p id="welcome-message" class="text-amber-100/90 text-lg md:text-xl max-w-2xl mx-auto mb-8">Bienvenidos a nuestra comunidad parroquial</p><!-- Mass Schedule -->
+    <!-- Facebook Link --> <a href="https://www.facebook.com/parroquiavirgen.delcarmen.186/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-6 py-3 rounded-full transition-all hover:scale-105">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg> Síguenos en Facebook </a>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-50 to-transparent"></div>
+   </header><!-- Horario de Misas Section -->
+   <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-stone-100 to-amber-50">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Horario de <span class="text-amber-700">Misas</span></h2>
+      <p class="text-stone-600">Te esperamos en nuestras celebraciones eucarísticas</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+       <div class="flex items-center gap-3 mb-6">
+        <i data-lucide="sun" class="w-8 h-8 text-amber-600"></i>
+        <h3 class="font-cinzel text-2xl font-bold text-stone-800">Domingos</h3>
+       </div>
+       <div class="space-y-4">
+        <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+         <p class="text-amber-900 font-bold text-lg">07:30 hs</p>
+         <p class="text-amber-700 text-sm">Santa Misa</p>
+        </div>
+       </div>
+      </div>
+      <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+       <div class="flex items-center gap-3 mb-6">
+        <i data-lucide="moon" class="w-8 h-8 text-amber-600"></i>
+        <h3 class="font-cinzel text-2xl font-bold text-stone-800">Jueves</h3>
+       </div>
+       <div class="space-y-4">
+        <div class="p-4 bg-amber-50 rounded-lg border border-amber-200">
+         <p class="text-amber-900 font-bold text-lg">19:00 hs</p>
+         <p class="text-amber-700 text-sm">Jueves Eucarístico y Sacerdotal</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Semana Santa Section -->
+   <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+     <span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Semana Santa 2026 </span>
+     <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Programa de <span class="text-amber-700">Semana Santa</span></h2>
+     <p class="text-stone-600 max-w-2xl mx-auto">Te invitamos a vivir junto a nuestra comunidad estos días santos de reflexión, oración y celebración.</p>
+    </div><!-- Timeline -->
+    <div class="relative pl-12 md:pl-16 space-y-8">
+     <div class="timeline-line"></div><!-- Viernes 27 de Marzo --> <!-- Viernes de Dolores -->
+     <div class="relative fade-in-up" style="animation-delay: 0.1s;">
+      <div class="timeline-dot top-2"></div>
+      <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-green-100 relative overflow-hidden"
+    style="
+      background-image: url('https://i.redd.it/pf6cxmj3z0b21.jpg');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    ">
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-violet-600 to-violet-700 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Viernes</p>
+         <p class="text-lg font-cinzel font-bold">de Dolores</p>
+         <p class="text-xs">27 de Marzo</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Rezo del Vía Crucis</h3>
+         <p class="text-violet-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+        </div>
+       </div>
+       <p class="text-stone-600">🕯️Con participación de todos los grupos pastorales y barrios de la comunidad.</p>
+      </div>
+     </div><!-- Domingo de Ramos -->
+     <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+      <div class="timeline-dot top-2"></div>
+       <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-green-100 relative overflow-hidden"
+    style="
+      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/009/306/540/small/green-leaf-of-palm-tree-on-transparent-background-file-png.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    ">
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-green-600 to-green-700 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Domingo</p>
+         <p class="text-lg font-cinzel font-bold">de Ramos</p>
+         <p class="text-xs">29 de Marzo</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Santa Misa</h3>
+         <p class="text-green-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 07:30 hs</p>
+        </div>
+       </div>
+       <p class="text-stone-600">🌿 Inicia en el portón del templo con la procesión y bendición de Ramos.</p>
+      </div>
+     </div><!-- Miércoles Santo -->
+     <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+      <div class="timeline-dot top-2"></div>
+      <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100">
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-purple-600 to-purple-700 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Miércoles</p>
+         <p class="text-lg font-cinzel font-bold">Santo</p>
+         <p class="text-xs">1 de Abril</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Películas de Semana Santa</h3>
+         <p class="text-purple-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 18:00 hs</p>
+        </div>
+       </div>
+       <p class="text-stone-600">🎬 Proyección de películas de Semana Santa para los Jóvenes</p>
+      </div>
+     </div><!-- Jueves Santo -->
+     <div class="relative fade-in-up" style="animation-delay: 0.4s;">
+      <div class="timeline-dot top-2"></div>
+        <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-amber-100 relative overflow-hidden"
+    style="
+      background-image: url('https://img.freepik.com/vector-premium/feliz-celebracion-corpus-christi-fe-unidad_999252-18848.jpg?semt=ais_hybrid&w=740&q=80');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    ">
+
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-amber-600 to-yellow-600 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Jueves</p>
+         <p class="text-lg font-cinzel font-bold">Santo</p>
+         <p class="text-xs">2 de Abril</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Celebración Eucarística</h3>
+         <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+        </div>
+       </div>
+       <div class="text-stone-600 space-y-2 text-sm md:text-base">
+        <p class="text-stone-600 font-bold">💧 Misa y Lavatorio de los pies</p>
+        <p>⛪ <strong>Encargados de la liturgia:</strong> Legión de María</p>
+        <div class="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
+         <p class="font-semibold text-amber-800">🕯️ Vigilia de Adoración al Santísimo</p>
+         <p class="text-amber-700 font-bold mt-2">EL TEMPLO PERMANECERÁ ABIERTO HASTA EL VIERNES de tardecita/noche</p>
+         <div class="mt-4">
+  <a 
+    href="https://drive.google.com/file/d/1PCAHgBEdTGzB6JyOAt9wuxoIxU7phqY0/view?usp=sharing" 
+    target="_blank" 
+    class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg transition"
+  >
+    Ver horarios de encargados
+  </a>
+</div>
+        </div>
+       </div>
+      </div>
+     </div><!-- Viernes Santo -->
+     <div class="relative fade-in-up" style="animation-delay: 0.5s;">
+      <div class="timeline-dot top-2"></div>
+        <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-red-200 bg-gradient-to-br from-white to-red-50 relative overflow-hidden"
+    style="
+      background-image: url('https://i.pinimg.com/236x/97/e9/d5/97e9d5734cdc6a9a55a4044c7ade21f0.jpg');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    "
+  >
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-red-700 to-red-800 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Viernes</p>
+         <p class="text-lg font-cinzel font-bold">Santo</p>
+         <p class="text-xs">3 de Abril</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Pasión del Señor</h3>
+         <p class="text-stone-600">🛐Confesión durante la mañana</p>
+        </div>
+       </div>
+       <div class="space-y-4">
+        <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-red-100">
+         <span class="bg-red-100 text-red-800 px-3 py-1 rounded-lg font-bold text-sm whitespace-nowrap">15:00 hs</span>
+         <div>
+          <p class="font-semibold text-stone-800">Celebración de la Pasión</p>
+          <p class="text-sm text-stone-500">Encargados: Renovación Carismática Católica</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-blue-200">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg font-bold text-sm whitespace-nowrap">16:30 hs</span>
+        <div>
+            <p class="font-semibold text-stone-800"> Inicio de la Novena de la Divina Misericordia</p>
+            <p class="text-sm text-stone-600">Luego de la celebración del día</p>
+        </div>
+        </div>
+        <div class="flex items-start gap-3 p-3 bg-white rounded-lg border border-red-100">
+         <span class="bg-red-100 text-red-800 px-3 py-1 rounded-lg font-bold text-sm whitespace-nowrap">17:00 hs</span>
+         <div>
+          <p class="font-semibold text-stone-800">Meditación de las 7 Palabras</p>
+         </div>
+        </div>  
+       </div>
+      </div>
+     </div><!-- Sábado de Gloria -->
+     <div class="relative fade-in-up" style="animation-delay: 0.6s;">
+      <div class="timeline-dot top-2"></div>
+        <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 relative overflow-hidden"
+    style="
+      background-image: url('https://www.shutterstock.com/image-vector/paschal-candle-easter-vigil-holy-600nw-2254514935.jpg');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    "
+  >
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Sábado</p>
+         <p class="text-lg font-cinzel font-bold">de Gloria</p>
+         <p class="text-xs">4 de Abril</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">Vigilia Pascual</h3>
+         <p class="text-indigo-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 19:00 hs</p>
+        </div>
+       </div>
+       <p class="text-stone-600">⛪ <strong>Encargados de la liturgia:</strong> Comunidad de Familias Misioneras de Cristo</p>
+      </div>
+     </div><!-- Domingo de Pascua -->
+     <div class="relative fade-in-up" style="animation-delay: 0.7s;">
+      <div class="timeline-dot top-2"></div>
+      <div
+    class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-yellow-200 bg-gradient-to-br from-white to-yellow-50 relative overflow-hidden"
+    style="
+      background-image: url('https://i.pinimg.com/736x/d6/80/e4/d680e4d6f66d51e2968dab2a666a61e5.jpg');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 120px;
+    "
+  >
+       <div class="flex flex-wrap items-start gap-4 mb-4">
+        <div class="bg-gradient-to-br from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-xl">
+         <p class="text-m font-semibold uppercase tracking-wider">Domingo</p>
+         <p class="text-lg font-cinzel font-bold">de Pascua</p>
+         <p class="text-xs">5 de Abril</p>
+        </div>
+        <div>
+         <h3 class="font-cinzel text-xl font-bold text-stone-800">¡Cristo ha Resucitado!</h3>
+         <p class="text-amber-700 font-semibold flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 07:30 hs</p>
+        </div>
+       </div>
+       <p class="text-stone-600">⛪ <strong>Encargados:</strong> Legión de María Juvenil</p>
+       <p class="mt-4 text-center font-cinzel text-xl font-bold text-amber-700">¡Aleluya! ¡Ha Resucitado!</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Próximos Eventos Section -->
+   <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-amber-50 to-stone-100">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-12"><span class="inline-block bg-amber-200 text-amber-900 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Próximos Eventos </span>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Celebraciones <span class="text-amber-700">Especiales</span></h2>
+      <p class="text-stone-600 max-w-2xl mx-auto">Te invitamos a participar en las festividades y celebraciones de nuestra comunidad parroquial.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8"><!-- Pentecostés -->
+      <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-red-100 hover:border-red-200 relative overflow-hidden group">
+       <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
+        🔥
+       </div>
+       <div class="relative z-10">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="bg-gradient-to-br from-red-500 to-orange-500 text-white p-3 rounded-xl"><i data-lucide="flame" class="w-6 h-6"></i>
+         </div>
+         <h3 class="font-cinzel text-2xl font-bold text-stone-800">Pentecostés</h3>
+        </div>
+        <p id="pentecostes-date" class="text-red-700 font-semibold text-lg mb-3">Domingo, 24 de mayo</p>
+        <p class="text-stone-600 leading-relaxed">Celebramos el descenso del Espíritu Santo sobre los apóstoles. Una festividad llena de alegría y renovación espiritual para nuestra comunidad.</p>
+        <div class="mt-4 p-3 bg-red-50 rounded-lg border border-red-200">
+         <p class="text-red-800 text-sm"><strong> Santa Misa</strong> a las 07:30 hs</p>
+        </div>
+       </div>
+      </div><!-- Fiesta Patronal -->
+      <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-blue-100 hover:border-blue-200 relative overflow-hidden group">
+       <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
+        👑
+       </div>
+       <div class="relative z-10">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="bg-gradient-to-br from-blue-500 to-purple-500 text-white p-3 rounded-xl"><i data-lucide="heart" class="w-6 h-6"></i>
+         </div>
+         <h3 class="font-cinzel text-2xl font-bold text-stone-800">Fiesta Patronal</h3>
+        </div>
+        <p id="patronal-date" class="text-blue-700 font-semibold text-lg mb-3">Jueves, 16 de julio - Nuestra Señora del Carmen</p>
+        <p class="text-stone-600 leading-relaxed">Honramos a la Virgen María del Carmen, protectora de nuestra parroquia. Nos congregamos en fe y devoción para celebrar a nuestra Madre celestial.</p>
+        <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+         <p class="text-blue-800 text-sm"><strong>Celebración solemne</strong> y procesión parroquial</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programas y Catequesis Section -->
+   <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+     <span class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Programas Parroquiales</span>
+     <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Formación y <span class="text-amber-700">Catequesis</span></h2>
+     <p class="text-stone-600 max-w-2xl mx-auto">Propuestas de formación espiritual y catequética para todas las edades.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6"><!-- Catequesis 2026 -->
+     <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-green-100 hover:border-green-200">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white p-3 rounded-lg"><i data-lucide="book-open" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-stone-800">Catequesis 2026</h3>
+      </div>
+      <div class="space-y-3 text-stone-600">
+       <p class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0"></i> <span><strong>Ya ha comenzado</strong> la formación catequética para niños y jóvenes</span></p>
+       <p class="text-sm text-stone-500">Preparación para los sacramentos y formación en la fe</p>
+       <div class="pt-3 border-t border-green-100">
+        <p class="text-green-700 font-semibold text-sm">Consulta horarios en secretaría</p>
+       </div>
+      </div>
+     </div><!-- Catequesis Adultos -->
+     <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-purple-100 hover:border-purple-200">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="bg-gradient-to-br from-purple-500 to-pink-600 text-white p-3 rounded-lg"><i data-lucide="users" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-stone-800">Catequesis Adultos</h3>
+      </div>
+      <div class="space-y-3 text-stone-600">
+       <p class="flex items-start gap-2"><i data-lucide="calendar" class="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0"></i> <span><strong>Inicia en mayo</strong> la formación catequética para adultos</span></p>
+       <p class="text-sm text-stone-500">Profundización en la fe y espiritualidad cristiana</p>
+       <div class="pt-3 border-t border-purple-100">
+        <p class="text-purple-700 font-semibold text-sm">Mayor información próximamente</p>
+       </div>
+      </div>
+     </div><!-- Cursillo Prebaustimal -->
+     <div class="schedule-card card-glass rounded-2xl p-6 shadow-lg border border-cyan-100 hover:border-cyan-200">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-3 rounded-lg"><i data-lucide="droplet" class="w-6 h-6"></i>
+       </div>
+       <h3 class="font-cinzel text-xl font-bold text-stone-800">Cursillo Prebautismal</h3>
+      </div>
+      <div class="space-y-3 text-stone-600">
+       <p class="flex items-start gap-2"><i data-lucide="repeat" class="w-4 h-4 text-cyan-600 mt-0.5 flex-shrink-0"></i> <span><strong>Cada primer domingo</strong> del mes a las 10:00 hs</span></p>
+       <p class="text-sm text-stone-500">Cursillo para Padres y Padrinos</p>
+       <div class="pt-3 border-t border-cyan-100">
+        <p class="text-cyan-700 font-semibold text-sm">Inscripción en secretaría</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Galería de Eventos Section -->
+   <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-stone-100 to-amber-50">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-12"><span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4"> Galería de Momentos </span>
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Momentos de <span class="text-amber-700">Fe y Comunidad</span></h2>
+      <p class="text-stone-600 max-w-2xl mx-auto">Compartimos los momentos más especiales de nuestra parroquia y comunidad parroquial.</p>
+     </div><!-- Fiesta Patronal -->
+     <div class="mb-16">
+  <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
+    <span class="w-2 h-2 bg-amber-700 rounded-full"></span>
+    Fiesta Patronal - Nuestra Señora del Carmen
+  </h3>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all h-72 md:h-80 cursor-pointer"
+         onclick="openModal('templo.jpeg', 'Procesión Fiesta Patronal')">
+      <img src="templo.jpeg" alt="Procesión Fiesta Patronal" loading="lazy"
+           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+        <p class="text-white font-semibold text-sm">Procesión Fiesta Patronal</p>
+      </div>
+    </div>
+
+    <div class="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all h-72 md:h-80 cursor-pointer"
+         onclick="openModal('cirio.jpeg', 'Celebración Patronal')">
+      <img src="cirio.jpeg" alt="Celebración Patronal" loading="lazy"
+           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+        <p class="text-white font-semibold text-sm">Celebración Patronal</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+      <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4" onclick="closeModal()">
+  <div class="relative max-w-4xl w-full">
+    <img id="modalImage" src="" alt="" class="w-full max-h-[85vh] object-contain rounded-xl">
+    <p id="modalCaption" class="text-white text-center mt-4 text-lg"></p>
+    <button onclick="closeModal()" class="absolute top-2 right-2 bg-white text-black rounded-full px-3 py-1 font-bold">X</button>
+  </div>
+</div><!-- Comunidad -->
+     <div>
+      <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3"><span class="w-2 h-2 bg-green-700 rounded-full"></span> Vida Comunitaria</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Espacio para más fotos comunitarias -->
+       <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="text-center"><i data-lucide="camera" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+         <p class="text-green-700 font-semibold">Próximas fotos</p>
+        </div>
+       </div>
+       <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="text-center"><i data-lucide="users" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+         <p class="text-green-700 font-semibold">Actividades Comunitarias</p>
+        </div>
+       </div>
+       <div class="relative overflow-hidden rounded-2xl shadow-lg border border-green-100 h-64 md:h-72 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="text-center"><i data-lucide="heart" class="w-12 h-12 text-green-600 mx-auto mb-3 opacity-50"></i>
+         <p class="text-green-700 font-semibold">Servicio Comunitario</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+    <section class="px-4 md:px-8 py-16 max-w-5xl mx-auto">
+    <div class="text-center mb-12"><span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 rounded-full text-sm font-semibold mb-4">Contacto</span>
+     <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-stone-800 mb-4">Ubícanos y <span class="text-amber-700">Contáctanos</span></h2>
+     <p class="text-stone-600 max-w-2xl mx-auto">Estamos aquí para servirte. No dudes en comunicarte con nosotros.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+     <!-- Información de Contacto -->
+     <div class="space-y-6">
+      <div class="card-glass rounded-2xl p-8 shadow-lg border border-amber-100">
+       <h3 class="font-cinzel text-2xl font-bold text-stone-800 mb-6">Información</h3>
+       <div class="space-y-6">
+        <!-- Teléfono -->
+        <div class="flex items-start gap-4">
+         <div class="bg-amber-100 text-amber-700 p-3 rounded-lg flex-shrink-0">
+          <i data-lucide="phone" class="w-6 h-6"></i>
+         </div>
+         <div>
+          <p class="font-semibold text-stone-800">Teléfono</p>
+          <p id="parish-phone" class="text-amber-700 font-bold text-lg">+595 985 000 000</p>
+          <p class="text-sm text-stone-500 mt-1">Llámanos durante horario de secretaría</p>
+         </div>
+        </div><!-- Horario Secretaría -->
+        <div class="flex items-start gap-4">
+         <div class="bg-blue-100 text-blue-700 p-3 rounded-lg flex-shrink-0">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+         </div>
+         <div>
+          <p class="font-semibold text-stone-800">Horario de Secretaría</p>
+          <p id="secretary-hours" class="text-blue-700 font-semibold">Jueves, Viernes y Sábado de mañana</p>
+          <p class="text-sm text-stone-500 mt-1">En la casa parroquial</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Mapa -->
+     <div class="rounded-2xl overflow-hidden shadow-lg border border-amber-100 h-96 md:h-auto flex flex-col">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4907.758478966236!2d-56.15342463185254!3d-27.225399944598646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457830362efc099%3A0x829e5b4001233589!2sIglesia%20Virgen%20del%20Carmen!5e0!3m2!1ses-419!2spy!4v1774043828765!5m2!1ses-419!2spy" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="flex-grow"></iframe>
+    </div>
+    </div>
+   </section>
+   <footer class="hero-gradient text-white py-12 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+     <svg class="w-12 h-12 mx-auto mb-4 text-amber-400" viewbox="0 0 100 100" fill="currentColor"><path d="M50 5 L50 95 M20 30 L80 30" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round" />
+     </svg>
+     <h3 class="font-cinzel text-2xl font-bold mb-2">Parroquia Ntra. Sra. del Carmen</h3>
+     <p class="text-amber-200/80 mb-6">Unidos en fe, esperanza y caridad</p><a href="https://www.facebook.com/parroquiavirgen.delcarmen.186/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-300 hover:text-amber-100 transition-colors">
+      <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg> Visítanos en Facebook </a>
+     <p class="mt-8 text-sm text-amber-200/60">© 2025 Parroquia Nuestra Señora del Carmen</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      parish_name: 'Parroquia Ntra. Sra. del Carmen',
+      welcome_message: 'Bienvenidos a nuestra comunidad parroquial',
+      pentecostes_date: 'Domingo, 18 de mayo',
+      patronal_date: 'Martes, 16 de julio - Nuestra Señora del Carmen',
+      parish_phone: '+54 9 ...',
+      secretary_hours: 'Jueves, viernes y sábado de mañana',
+      parish_email: 'contacto@parroquia.com',
+      background_color: '#1a1a2e',
+      surface_color: '#ffffff',
+      text_color: '#292524',
+      primary_color: '#c9a227',
+      secondary_color: '#d4a574'
+    };
+    
+    async function onConfigChange(config) {
+      const parishName = config.parish_name || defaultConfig.parish_name;
+      const welcomeMessage = config.welcome_message || defaultConfig.welcome_message;
+      const pentecostesDate = config.pentecostes_date || defaultConfig.pentecostes_date;
+      const patronalDate = config.patronal_date || defaultConfig.patronal_date;
+      const parishPhone = config.parish_phone || defaultConfig.parish_phone;
+      const secretaryHours = config.secretary_hours || defaultConfig.secretary_hours;
+      const parishEmail = config.parish_email || defaultConfig.parish_email;
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_color || defaultConfig.primary_color;
+      const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
+      
+      // Update text content
+      const parishNameEl = document.getElementById('parish-name');
+      if (parishNameEl) {
+        parishNameEl.innerHTML = parishName.replace('Ntra. Sra. del Carmen', '<span class="gold-gradient">Ntra. Sra. del Carmen</span>');
+      }
+      
+      const welcomeEl = document.getElementById('welcome-message');
+      if (welcomeEl) welcomeEl.textContent = welcomeMessage;
+      
+      const pentecostesEl = document.getElementById('pentecostes-date');
+      if (pentecostesEl) pentecostesEl.textContent = pentecostesDate;
+      
+      const patronalEl = document.getElementById('patronal-date');
+      if (patronalEl) patronalEl.textContent = patronalDate;
+      
+      const phoneEl = document.getElementById('parish-phone');
+      if (phoneEl) phoneEl.textContent = parishPhone;
+      
+      const secretaryEl = document.getElementById('secretary-hours');
+      if (secretaryEl) secretaryEl.textContent = secretaryHours;
+      
+      const emailEl = document.getElementById('parish-email');
+      if (emailEl) emailEl.textContent = parishEmail;
+      
+      // Update colors via CSS custom properties
+      document.documentElement.style.setProperty('--bg-color', bgColor);
+      document.documentElement.style.setProperty('--surface-color', surfaceColor);
+      document.documentElement.style.setProperty('--text-color', textColor);
+      document.documentElement.style.setProperty('--primary-color', primaryColor);
+      document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+      
+      // Apply background color to hero sections
+      document.querySelectorAll('.hero-gradient').forEach(el => {
+        el.style.background = `linear-gradient(135deg, ${bgColor} 0%, ${adjustColor(bgColor, 20)} 50%, ${adjustColor(bgColor, 40)} 100%)`;
+      });
+      
+      // Apply surface color to cards
+      document.querySelectorAll('.card-glass').forEach(el => {
+        el.style.backgroundColor = surfaceColor;
+      });
+      
+      // Apply text color
+      document.querySelectorAll('.text-stone-800, .text-stone-600').forEach(el => {
+        if (el.classList.contains('text-stone-800')) {
+          el.style.color = textColor;
+        }
+      });
+      
+      // Apply primary color to accents
+      document.querySelectorAll('.text-amber-400, .text-amber-700, .text-amber-800').forEach(el => {
+        el.style.color = primaryColor;
+      });
+    }
+    
+    function adjustColor(hex, percent) {
+      const num = parseInt(hex.replace('#', ''), 16);
+      const amt = Math.round(2.55 * percent);
+      const R = Math.min(255, (num >> 16) + amt);
+      const G = Math.min(255, ((num >> 8) & 0x00FF) + amt);
+      const B = Math.min(255, (num & 0x0000FF) + amt);
+      return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
+    }
+    
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => { config.primary_color = value; window.elementSdk.setConfig({ primary_color: value }); }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => { config.secondary_color = value; window.elementSdk.setConfig({ secondary_color: value }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+    
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['parish_name', config.parish_name || defaultConfig.parish_name],
+        ['welcome_message', config.welcome_message || defaultConfig.welcome_message],
+        ['pentecostes_date', config.pentecostes_date || defaultConfig.pentecostes_date],
+        ['patronal_date', config.patronal_date || defaultConfig.patronal_date],
+        ['parish_phone', config.parish_phone || defaultConfig.parish_phone],
+        ['secretary_hours', config.secretary_hours || defaultConfig.secretary_hours],
+        ['parish_email', config.parish_email || defaultConfig.parish_email]
+      ]);
+    }
+    
+
+    // Initialize
+    lucide.createIcons();
+    
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  
+  function openModal(src, caption) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('modalCaption').textContent = caption;
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+  }
+
+  function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+  }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9df83beda636116a',t:'MTc3NDA0NjU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
