@@ -174,24 +174,7 @@
       <p class="text-stone-600 max-w-2xl mx-auto">Te invitamos a participar en las festividades y celebraciones de nuestra comunidad parroquial.</p>
      </div>
      <div class="grid md:grid-cols-2 gap-8">
-      <!-- Pentecostés -->
-      <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-red-100 hover:border-red-200 relative overflow-hidden group">
-       <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
-        🔥
-       </div>
-       <div class="relative z-10">
-        <div class="flex items-center gap-3 mb-4">
-         <div class="bg-gradient-to-br from-red-500 to-orange-500 text-white p-3 rounded-xl"><i data-lucide="flame" class="w-6 h-6"></i>
-         </div>
-         <h3 class="font-cinzel text-2xl font-bold text-stone-800">Pentecostés</h3>
-        </div>
-        <p id="pentecostes-date" class="text-red-700 font-semibold text-lg mb-3">Domingo, 24 de mayo</p>
-        <p class="text-stone-600 leading-relaxed">Celebramos el descenso del Espíritu Santo sobre los apóstoles. Una festividad llena de alegría y renovación espiritual para nuestra comunidad.</p>
-        <div class="mt-4 p-3 bg-red-50 rounded-lg border border-red-200">
-         <p class="text-red-800 text-sm"><strong> Santa Misa</strong> a las 08:00 hs</p>
-        </div>
-       </div>
-      </div><!-- Fiesta Patronal -->
+      <!-- Fiesta Patronal -->
       <div class="schedule-card card-glass rounded-2xl p-8 shadow-lg border border-blue-100 hover:border-blue-200 relative overflow-hidden group">
        <div class="absolute -top-8 -right-8 text-9xl opacity-10 group-hover:opacity-20 transition-opacity">
         👑
@@ -204,9 +187,10 @@
         </div>
         <p id="patronal-date" class="text-blue-700 font-semibold text-lg mb-3">Jueves, 16 de julio - Nuestra Señora del Carmen</p>
         <p class="text-stone-600 leading-relaxed">Honramos a la Virgen María del Carmen, protectora de nuestra parroquia. Nos congregamos en fe y devoción para celebrar a nuestra Madre celestial.</p>
-        <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
-         <p class="text-blue-800 text-sm"><strong>Celebración solemne</strong> y procesión parroquial</p>
-        </div>
+        <br
+              <button class="gallery-photo rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl" data-src="images/fiesta patronal_2026.jpg">
+                <img src="images/fiesta patronal_2026.jpg" alt="Fiesta Patronal" class="w-full h-full object-contain bg-white"  style="transform: scale(1);" onerror="this.style.background='linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%)'; this.alt='Imagen no disponible'; ">
+              </button>
        </div>
       </div>
      </div>
@@ -516,8 +500,16 @@
      </div>
     </div>
    </section><!-- Photo Modal -->
-   <div id="photo-modal" class="fixed inset-0 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center p-4">
-    <div class="relative max-w-4xl w-full max-h-96 md:max-h-screen"><img id="modal-image" src="" alt="Foto ampliada" class="w-full h-full object-contain rounded-2xl"> <button id="modal-close" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="x" class="w-6 h-6"></i> </button> <button id="modal-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="chevron-left" class="w-6 h-6"></i> </button> <button id="modal-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="chevron-right" class="w-6 h-6"></i> </button>
+   <div id="photo-modal" class="fixed inset-0 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-50 overflow-auto">
+    <div class="min-h-full flex items-center justify-center p-4">
+      <div class="relative max-w-6xl w-full"><img id="modal-image" src="" alt="Foto ampliada" class="max-w-full h-auto rounded-2xl"> 
+      <button id="modal-close" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="x" class="w-6 h-6"></i> 
+      </button> 
+      <button id="modal-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="chevron-left" class="w-6 h-6"></i> 
+      </button> 
+      <button id="modal-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all hover:scale-110"> <i data-lucide="chevron-right" class="w-6 h-6"></i> 
+      </button>
+    </div>
     </div>
    </div>
    <section class="px-4 md:px-8 py-16 bg-gradient-to-br from-stone-100 to-amber-50">
@@ -1008,9 +1000,23 @@
     const modalClose = document.getElementById('modal-close');
     const modalPrev = document.getElementById('modal-prev');
     const modalNext = document.getElementById('modal-next');
+    
 
     let currentPhotos = [];
     let currentPhotoIndex = 0;
+    let scale = 0.85;
+
+    modalImage.addEventListener('wheel', (e) => {
+  e.preventDefault();
+
+  if (e.deltaY < 0) {
+    scale += 0.2;
+  } else {
+    scale = Math.max(1, scale - 0.2);
+  }
+
+  modalImage.style.transform = `scale(${scale})`;
+});
 
     function openModal(photoList) {
       currentPhotos = photoList;
